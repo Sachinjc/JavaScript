@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> asynchronuous </title>
+</head>
+<style>
+.body{
+    background-color: black;
+     color : white 
+}
+</style>
+<body class = " body">
+    <h1>  chai aur code </h1>
+    <button id = "stop"> stop</button>
+</body>
+<script> 
+
+ // it will print sachin kumar on console in 12 second 
+
+//  setTimeout( function(){
+//      console.log(" sachin kumar")
+//  },12000) // here 12000 represent the 2 second 
+
+const saysachin  = function(){
+  console.log(" hi sachin !")
+}
+
+  const changeheading = document.querySelector('h1').innerHTML=" welcome in  my  js playlist"
+ const changeme = setTimeout(changeheading, 5000)
+
+//  clearTimeout(changeme)
+// now apply the above  on the event 
+
+addEventListener('clcik', function(){
+clearTimeout(changeme)
+console.log("Stopped")
+})
+ setTimeout(saysachin , 10000)
+  </script>
+</html>

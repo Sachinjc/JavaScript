@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> asynchronuous </title>
+</head>
+<style>
+.body{
+    background-color: black;
+     color : white 
+}
+</style>
+<body class = " body">
+    <h1>  chai aur code </h1>
+    <button id = "start"> start</button>
+    <button id = "stop"> stop</button>
+</body>
+
+<script>
+     const date =function( str ){
+        console.log(str, Date.now())
+     }
+const intervalid=  setInterval( date , 1000, " hi sachin ")
+
+    clearInterval(intervalid,  1000)
+</script>
+
+
+</html>

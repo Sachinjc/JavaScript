@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code </title>
+</head>
+<body  style = "background-color: black; color: white;">
+    
+  <ul class="language">
+    <li>javScript</li>
+  </ul>
+</body>
+<script>
+  function addLanguage(langname){
+    const li= document.createElement('li')
+    li.innerHTML =`${langname}`
+    document.querySelector('.language').appendChild(li)
+
+  }
+  addLanguage("python")
+  addLanguage("typescript")
+
+// in large projects append a child like that 
+  function addoptilanguage(langname){
+    const li= document.createElement('li')
+  const  addtext =document.createTextNode(langname)
+  li.appendChild(addtext);
+
+  document.querySelector('.language').appendChild(li)
+  }
+  addoptilanguage('golang')
+
+  // editing the  values 
+ const secondlang = document.querySelector('li:nth-child(2)')
+//  secondlang.innerHTML= "Mojo"
+
+ // now we use the optimized approach to edit the child  or values 
+ const newli = document.createElement('li')
+ 
+newli.textContent = "Mojo"
+
+secondlang.replaceWith(newli)
+
+
+// edit 
+
+const firstlang = document.querySelector("li:first-child")
+ firstlang.outerHTML='<li>TypeScript</li>'
+
+
+// we are trying to remove the golang 
+
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+</script>
+</html>
